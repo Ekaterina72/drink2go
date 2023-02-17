@@ -13,15 +13,15 @@
   }
 
   &--convenience {
-    background-image: url('../img/advantages/convenience.svg');
+    background-image: url('../../img/advantages/convenience.svg');
   }
 
   &--energy {
-    background-image: url("/img/advantages/energy.svg");
+    background-image: url("../../img/advantages/energy.svg");
   }
 
   &--environment {
-    background-image: url("/img/advantages/environment.svg");
+    background-image: url("../../img/advantages/environment.svg");
   }
 
   @media (min-width: ($tablet-width)) {
