@@ -2,7 +2,7 @@
   "name": "htmlacademy-gulp-template",
   "version": "1.0.0",
   "private": true,
-  "homepage": ,
+  "homepage": "https://ekaterina72.github.io",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.4.13",
@@ -36,7 +36,8 @@
     "lint": "npm run editorconfig && npm run stylelint && npm run w3c && npm run bemlinter",
     "start": "gulp runDev",
     "build": "gulp buildProd",
-    "preview": "gulp buildProd && gulp startServer"
+    "preview": "gulp buildProd && gulp startServer",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     "last 2 versions",
