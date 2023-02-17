@@ -1,0 +1,60 @@
+.user-navigation {
+  @include list-reset;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+
+  @media (min-width: ($tablet-width)) {
+    max-width: 200px;
+  }
+
+  @media (min-width: ($desktop-width)) {
+    max-width: 400px;
+    gap: 20px;
+  }
+}
+
+.user-navigation__link {
+  @include link-reset;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+
+  &:active {
+    background-color: #f0ebff;
+  }
+
+  @media (min-width: ($tablet-width)) {
+    padding: 32px 22px;
+
+    &:hover,
+    &:focus {
+      color: var(--base-accent-color);
+    }
+
+    &:active {
+      color: var(--base-accent-color);
+    }
+  }
+
+  @media (min-width: ($desktop-width)) {
+    padding: 32px 20px;
+    gap: 8px;
+  }
+}
+
+.user-navigation__name {
+  display: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+
+  @media (min-width: ($desktop-width)) {
+    display: block;
+  }
+}

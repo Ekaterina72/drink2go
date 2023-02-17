@@ -1,0 +1,112 @@
+.product-list {
+  @include list-reset;
+  margin: 0;
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+
+  @media (min-width: ($tablet-width)) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: ($desktop-width)) {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 60px;
+  }
+}
+
+.product-list__item {
+  position: relative;
+  background-color: var(--base-white-color);
+  width: 280px;
+  padding: 40px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  @media (min-width: ($tablet-width)) {
+    width: 349px;
+    padding: 50px 30px 30px;
+  }
+
+  @media (min-width: ($desktop-width)) {
+    width: 317px;
+  }
+}
+
+.product-list__link {
+  @include link-reset;
+  margin-bottom: 4px;
+
+  &:hover::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  @media (min-width: ($tablet-width)) {
+    margin-bottom: 10px;
+  }
+}
+
+.product-list__image {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 24px;
+
+  @media (min-width: ($tablet-width)) {
+    margin-bottom: 30px;
+  }
+}
+
+.product-list__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+
+  @media (min-width: ($tablet-width)) {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.product-list__description {
+  flex-grow: 1;
+  margin: 0 0 16px;
+
+  @media (min-width: ($tablet-width)) {
+    margin-bottom: 20px;
+  }
+}
+
+.product-list__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-list__price {
+  margin: 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.product-list__button {
+  position: relative;
+  padding-left: 46px;
+  background-image: url("../../img/cart-button-icon.svg");
+  background-repeat: no-repeat;
+  background-position: left 20px center;
+}

@@ -1,0 +1,57 @@
+.checkbox-field {
+  cursor: pointer;
+
+  display: grid;
+  grid-template-columns: 42px auto;
+  gap: 10px;
+
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+}
+
+.checkbox-field__mark {
+  width: 42px;
+  height: 24px;
+  display: flex;
+  justify-content: start;
+  background-color: var(--base-grey-color);
+  border-radius: 12px;
+  border: 2px solid var(--base-grey-color);
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+.checkbox-field__mark::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: var(--base-white-color);
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+
+.checkbox-field:focus-within .checkbox-field__mark,
+.checkbox-field:hover .checkbox-field__mark {
+  border-color: #9070ec;
+  background-color: rgba(120, 89, 207, 0.25);
+}
+
+.checkbox-field__control:checked + .checkbox-field__mark {
+  border-color: var(--base-accent-color);
+  background-color: var(--base-accent-color);
+  justify-content: end;
+}
+
+.checkbox-field__control:disabled + .checkbox-field__mark {
+  border-color: #e2e2e2;
+  background-color: #e2e2e2;
+}
+
+.checkbox-field__control:disabled + .checkbox-field__mark + .checkbox-field__label {
+  color: var(--base-grey-color);
+}
+
+.checkbox-field__control:disabled:checked + .checkbox-field__mark::before {
+  background-color: var(--base-grey-color);
+}

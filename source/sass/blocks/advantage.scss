@@ -1,0 +1,69 @@
+.advantage {
+  padding-top: 66px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-repeat: no-repeat;
+  background-position: top center;
+  box-sizing: border-box;
+
+  &--speed {
+    background-image: url("../../img/advantages/speed.svg");
+  }
+
+  &--convenience {
+    background-image: url('../img/advantages/convenience.svg');
+  }
+
+  &--energy {
+    background-image: url("/img/advantages/energy.svg");
+  }
+
+  &--environment {
+    background-image: url("/img/advantages/environment.svg");
+  }
+
+  @media (min-width: ($tablet-width)) {
+    align-items: flex-start;
+    padding-top: 0;
+    padding-left: 72px;
+    background-position: top left;
+  }
+
+  @media (min-width: ($desktop-width)) {
+    align-items: center;
+    padding-top: 76px;
+    padding-left: 0;
+    max-width: 317px;
+    background-position: top center;
+  }
+}
+
+.advantage__name {
+  margin: 0 0 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+
+  @media (min-width: ($tablet-width)) {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.advantage__description {
+  margin: 0;
+  text-align: center;
+
+  @media (min-width: ($tablet-width)) {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  @media (min-width: ($desktop-width)) {
+    text-align: center;
+  }
+}

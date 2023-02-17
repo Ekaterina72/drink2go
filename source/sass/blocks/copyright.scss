@@ -1,0 +1,28 @@
+.copyright {
+  padding: 20px 0 30px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #bdbdbd;
+  text-align: center;
+
+  @media (min-width: ($tablet-width)) {
+    padding: 10px 0 10px;
+  }
+}
+
+.copyright__link {
+  @include link-reset;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: var(--base-accent-color);
+  }
+
+  &:active {
+    color: #593cac;
+  }
+}

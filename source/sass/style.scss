@@ -1,0 +1,41 @@
+/* GLOBAL */
+@import "global/variables";
+@import "global/global";
+@import "global/fonts";
+@import "global/visually-hidden";
+@import "global/container";
+@import "global/mixins";
+
+/* BLOCKS */
+@import "blocks/header";
+@import "blocks/main";
+@import "blocks/logo";
+@import "blocks/navigation";
+@import "blocks/button";
+@import "blocks/site-navigation";
+@import "blocks/user-navigation";
+@import "blocks/swiper";
+@import "blocks/slide-content";
+@import "blocks/swiper-pagination-bullet";
+@import "blocks/swiper-pagination-bullet-active";
+@import "blocks/section-heading";
+@import "blocks/section-title";
+@import "blocks/advantage";
+@import "blocks/advantages";
+@import "blocks/catalog";
+@import "blocks/catalog-filter";
+@import "blocks/price-range";
+@import "blocks/product-list";
+@import "blocks/catalog-pagination";
+@import "blocks/footer";
+@import "blocks/footer-section";
+@import "blocks/footer-contacts";
+@import "blocks/copyright";
+@import "blocks/slide";
+@import "blocks/map";
+@import "blocks/socials";
+@import "blocks/bar-control";
+@import "blocks/number-control";
+@import "blocks/radio-field";
+@import "blocks/checkbox-field";
+@import "blocks/sorting-select";

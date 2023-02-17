@@ -1,0 +1,97 @@
+.bar-control {
+  display: flex;
+  align-items: center;
+  height: 25px;
+  padding: 0;
+  border: none;
+}
+
+.bar-control__scale {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 280px;
+  height: 2px;
+  background-color: #e2e2e2;
+
+  @media (min-width: $tablet-width) {
+    width: 220px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+  }
+}
+
+.bar-control__painted {
+  position: absolute;
+  width: 235px;
+  height: 4px;
+  top: -1px;
+  left: 0;
+  background-color: #9070ec;
+
+  @media (min-width: $tablet-width) {
+    width: 177px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 274px;
+  }
+}
+
+.bar-control__handler {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -10px;
+  background-color: var(--base-white-color);
+  border: 2px solid #9070ec;
+  border-radius: 50%;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: border-color 0.2s ease-in-out;
+
+  &--min {
+    left: 0;
+  }
+
+  &--max {
+    right: -24px;
+  }
+
+  &::before {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    content: "";
+    border-radius: 50%;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-color: rgba(120, 89, 207, 0.25);
+  }
+
+  &:active::before {
+    background-color: var(--base-accent-color);
+  }
+
+  &:active {
+    border-color: var(--base-accent-color);
+  }
+}
+
+.bar-control:disabled .bar-control__handler {
+  background-color: var(--background-light-grey-color);
+  border-color: var(--base-grey-color);
+}
+
+.bar-control:disabled .bar-control__painted {
+  background-color: var(--base-grey-color);
+}

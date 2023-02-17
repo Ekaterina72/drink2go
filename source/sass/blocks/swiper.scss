@@ -1,0 +1,71 @@
+.swiper__button {
+  width: 20px;
+  height: 20px;
+  top: 52%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+
+  &--prev {
+    left: 0;
+  }
+
+  &--next {
+    right: 0;
+  }
+
+  &::after {
+    content: "";
+  }
+
+  @media (min-width: $tablet-width) {
+    top: 21px;
+    width: 80px;
+    height: 77%;
+
+    &--prev:hover,
+    &--prev:focus {
+      background: linear-gradient(to right, var(--base-white-color) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &--prev:active {
+      background: linear-gradient(to right, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+    }
+
+    &--next:hover,
+    &--next:focus {
+      background: linear-gradient(to left, var(--base-white-color) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &--next:active {
+      background: linear-gradient(to left, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 100%;
+  }
+}
+
+.swiper__arrow {
+  color: var(--base-accent-color);
+
+  &--next {
+    transform: rotate(180deg);
+  }
+}
+
+.swiper__button:disabled .swiper__arrow {
+  color: var(--base-grey-color);
+}
+
+.swiper__pagination {
+  display: none;
+
+  @media (min-width: ($desktop-width)) {
+    display: block;
+    bottom: 66px !important; /* stylelint-disable-line*/ // переопределение свойств библиотеки swiper, так как созданные библиотекой селекторы отвечающие за позиционировнаие имеют большую специфичность
+  }
+}

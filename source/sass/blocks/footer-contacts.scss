@@ -1,0 +1,50 @@
+.footer-contacts {
+  position: relative;
+  padding: 20px 0;
+
+  ::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    width: 100vw;
+    min-width: 320px;
+    height: 1px;
+    background-color: #f0ebff;
+  }
+
+  @media (min-width: ($tablet-width)) {
+    padding-top: 9px;
+
+    ::before {
+      display: none;
+    }
+  }
+}
+
+.footer-contacts__address {
+  font: inherit;
+  margin-bottom: 16px;
+  padding-left: 20px;
+  background-image: url("../../img/address.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+.footer-contacts__tel {
+  @include link-reset;
+  display: block;
+  padding-left: 20px;
+  background-image: url("../../img/phone.svg");
+  background-repeat: no-repeat;
+  background-position: center left;
+
+  &:hover,
+  &:focus {
+    color: #9070ec;
+  }
+
+  &:active {
+    color: #593cac;
+  }
+}

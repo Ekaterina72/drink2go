@@ -1,0 +1,8 @@
+.swiper-pagination-bullet-active {
+  background-color: var(--base-accent-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--base-accent-color);
+  }
+}

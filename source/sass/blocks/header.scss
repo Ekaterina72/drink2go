@@ -1,0 +1,13 @@
+.header__container {
+  margin: 0 auto;
+
+  @media (min-width: ($tablet-width)) {
+    width: 728px;
+    padding: 0 20px;
+  }
+
+  @media (min-width: ($desktop-width)) {
+    width: 1360px;
+    padding: 0 40px;
+  }
+}

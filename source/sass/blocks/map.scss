@@ -1,0 +1,18 @@
+.map__container {
+  width: 100vw;
+  min-width: 320px;
+  height: 420px;
+
+  @media (min-width: ($tablet-width)) {
+    height: 480px;
+  }
+
+  @media (min-width: ($desktop-width)) {
+    height: 540px;
+  }
+}
+
+.map__image {
+  display: block;
+  margin: 0 auto;
+}

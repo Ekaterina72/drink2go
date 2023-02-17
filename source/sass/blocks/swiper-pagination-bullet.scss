@@ -1,0 +1,17 @@
+.swiper-pagination-bullet {
+  display: inline-block;
+  width: 62px;
+  height: 4px;
+  background-color: var(--base-white-color);
+  border-radius: 0;
+  opacity: 1;
+
+  &:hover,
+  &:focus {
+    background-color: rgba(120, 89, 207, 0.25);
+  }
+
+  &:active {
+    background-color: var(--base-accent-color);
+  }
+}

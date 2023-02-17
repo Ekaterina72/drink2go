@@ -1,0 +1,28 @@
+.price-range {
+  display: grid;
+  justify-items: start;
+  align-items: start;
+}
+
+.price-range__bar {
+  margin: 0 0 25px;
+
+  @media (min-width: ($tablet-width)) {
+    margin-bottom: 21px;
+    margin-left: 6px;
+  }
+
+  @media (min-width: ($desktop-width)) {
+    margin-left: 0;
+  }
+}
+
+.price-range__input-control {
+  @media (min-width: ($tablet-width)) {
+    margin-left: 6px;
+  }
+
+  @media (min-width: ($desktop-width)) {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,44 @@
+.button {
+  display: inline-block;
+  padding: 8px 20px;
+  font: inherit;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: #9070ec;
+  }
+
+  &:active {
+    background-color: #593cac;
+  }
+
+  &--main {
+    color: var(--base-white-color);
+    background-color: var(--base-accent-color);
+
+    &:disabled {
+      background-color: var(--base-grey-color);
+    }
+  }
+
+  &--reset {
+    color: var(--base-accent-color);
+    background-color: var(--base-white-color);
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--base-white-color);
+    }
+
+    &:disabled {
+      background-color: #e2e2e2;
+      color: var(--base-white-color);
+    }
+  }
+}
